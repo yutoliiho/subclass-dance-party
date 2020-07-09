@@ -1,5 +1,6 @@
 var MakeRotateDancer = function (top, left, timeBetweenSteps) {
   MakeDancer.call(this, top, left, timeBetweenSteps);
+  // this.$node = $('<span class="rotateDancer"></span>');
 }
 
 MakeRotateDancer.prototype = Object.create(MakeDancer.prototype);

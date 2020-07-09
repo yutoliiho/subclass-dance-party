@@ -2,7 +2,6 @@ $(document).ready(function () {
   window.dancers = [];
 
   $('.addDancerButton').on('click', function (event) {
-    console.log(dancer)
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a
@@ -21,16 +20,22 @@ $(document).ready(function () {
     console.log($(this).data('dancer-maker-function-name'))
     // console.log(dancerMakerFunctionName) // makeBlinkyDancer
 
-    console.log(typeof dancerMakerFunctionName) // makeBlinkyDancer
-
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
+
     console.log(window)
     console.log(window['dancerMakerFunctionName'])
     console.log(dancerMakerFunction)
 
+    console.log('now?')
+    console.log(window.dancer)
     // make a dancer with a random position
-    var dancer = dancerMakerFunction(
+    // console.log(new dancerMakerFunction(10, 20, Math.random() * 1000))
+
+    // dancerMakerFunction is logging out blinkyDancer.js
+    // but when involking, its' undefined;
+
+    var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000

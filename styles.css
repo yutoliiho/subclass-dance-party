@@ -25,3 +25,21 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+.blinkyDancer{
+  border:10px solid red;
+  border-radius:10px;
+  position:absolute;
+}
+
+/* .popDancer{
+  border:10px solid pink;
+  border-radius:10px;
+  position:absolute;
+} */
+
+/* .rotateDancer{
+  border:10px solid yellow;
+  border-radius:10px;
+  position:absolute;
+} */
