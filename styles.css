@@ -4,6 +4,7 @@ body, html{
 body{
   margin: 0px;
   background-color:#444;
+  background-image: url(https://cdnb.artstation.com/p/assets/images/images/011/463/399/large/rasel-night-club1.jpg?1529699342);
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -25,6 +26,9 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.dancer:hover {
+  transform: scale(1.5);
+}
 
 .blinkyDancer{
   border:10px solid red;
@@ -32,14 +36,54 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
-/* .popDancer{
-  border:10px solid pink;
-  border-radius:10px;
-  position:absolute;
+.dancer.pop{
+  border: none;
+  /* border-radius:1px; */
+  width: 100px;
+  height: 105px;
+  background: url(https://i.gifer.com/5IPv.gif) center;
+  /* size: 50px; */
+  /* position:absolute; */
+  animation: pop 2s infinite ease;
+}
+/* .pop {
+  animation: pop 3s infinite ease;
 } */
 
-/* .rotateDancer{
-  border:10px solid yellow;
-  border-radius:10px;
-  position:absolute;
-} */
+@keyframes pop {
+  0% {
+      transform: scale(0.3);
+  }
+  35% {
+    transform: scale(1.0);
+}
+75% {
+  transform: scale(0.3);
+}
+  100% {
+      transform: scale(1.0);
+  }
+}
+
+.dancer.rotate {
+  /* border:10px solid yellow;
+  border-radius:0px; */
+  border: none;
+  width: 100px;
+  height: 105px;
+  background: url(https://i.gifer.com/47tj.gif) center;
+  /* position:absolute; */
+  animation: rotation 2s infinite linear;
+  /* animation-name: rotation; */
+};
+.rotate {
+  animation: rotation 2s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
