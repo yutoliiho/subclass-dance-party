@@ -12,12 +12,20 @@ $(document).ready(function () {
       Math.random() * 1000
     );
     var lineup =
-      winder.dancers.push(dancer)
     $('body').append(dancer.$node);
+    window.dancers.push(dancer)
   });
 
-  $('.lineupBtn').on('click', function (event) {
-    // var dancerLineUpFunctionName = $(this).data('dancer-maker-function-name');
+  $('.lineup').on('click', function() {
+    var height = $("body").height();
+    var width = $("body").width();
+    var leftpad = 0;
+    var numDancers = window.dancers.length;
+    var spacing = width/numDancers;
+    for (let dancer of window.dancers) {
+      dancer.lineUp(height/2, leftpad);
+      leftpad += spacing;
+    }
   });
 });
 
